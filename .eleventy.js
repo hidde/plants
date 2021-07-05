@@ -10,7 +10,7 @@ module.exports = (function(eleventyConfig) {
         layouts: "_layouts",
         data: "_data"
     },
-    templateFormats: ["njk", "md", "txt", "css", "png", "jpg", "jpeg", "svg"],
+    templateFormats: ["njk", "md", "txt", "css", "png", "jpg", "jpeg", "svg", "webmanifest"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
   }

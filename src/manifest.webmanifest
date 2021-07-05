@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "Shows information about Hidde's plants",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "260x260",
+      "type": "image/png"
+    }
+  ],
+  "name": "Hidde's plants",
+  "short_name": "Plants",
+  "start_url": "/"
+}

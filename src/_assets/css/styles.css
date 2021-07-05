@@ -35,25 +35,25 @@ a:hover {
   left: -9999em;
   top: -9999em;
 }
-h1 {
+.logo {
   font: 2.85em/.85 'Bungee Outline';
   white-space: nowrap;
   display: inline-block;
   vertical-align: top;
   margin: 0;
 }
-h1 span {
+.logo span {
   transform: rotate(-5deg);
   display: inline-block;
   color: rgba(0, 0, 0, 0.75);
 }
 @media (prefers-color-scheme: dark) {
-  h1 span {
+  .logo span {
      color: rgba(240,230,140, 0.75);
   }
 }
 @media (min-width: 50em) {
-  h1 {
+  .logo {
     font-size: 4em;
   }
   h2 {
@@ -86,7 +86,7 @@ h2 span {
     width: 3em;
   }
 }
-ul {
+.plant-list {
   padding: 0;
   display: grid;
   gap: 1em;
@@ -97,58 +97,31 @@ ul {
   grid-auto-columns: 30vh;
 }
 @media (min-width: 50em) {
-  ul {
-    margin-left: 7em;
-    justify-content: center;
+  .plant-list {
     overflow: visible;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill, 10em);
+    grid-template-columns: repeat(auto-fill, 20vw);
   }
 }
-li {
+.plant-list {
   list-style: none;
-  background-color: #444;
-  color: white;
 }
-li:nth-child(odd) {
-  margin-top: 1em;
-}
-li.fave {
-  position: relative;
-}
-li.fave summary > div::before {
-  content: "5✯";
-  display: inline-block;
-  text-transform: uppercase;
-  margin-bottom: .5em;
-  font-weight: bold;
-  font-size: 100%;
-  position: absolute;
-  padding: .5em;
-  background-color: crimson;
-  top: -.75em;
-  right: -.5em;
-  transform: rotate(1deg);
-  border-radius: 100%;
-  margin-left: -1em;
-  height: 1.4em;
-}
-li a {
+.plant-list a {
   color: white;
   transition: all 0.2s ease-in-out;
 }
-li a:hover {
+.plant-list a:hover {
   color: #eee;
 }
-li img {
+.plant-list img {
   width: 100%;
   height: auto;
   display: block;
   background: #555;
   min-block-size: 16em;
 }
-li div,
-li p {
+.plant-list div,
+.plant-list p {
   display: block;
   padding: 1em;
   text-align: center;

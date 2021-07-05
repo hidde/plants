@@ -1,0 +1,27 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hidde/plants.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hidde/plants/issues"
+  },
+  "homepage": "https://github.com/hidde/plants#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.6.0"
+  }
+}

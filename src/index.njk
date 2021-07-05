@@ -1,0 +1,15 @@
+---
+layout: base
+title: Hidde's plants
+eleventyExcludeFromCollections: true
+---
+
+<ul>
+{% for plant in collections.all %}
+  <li>
+    <a href="{{ plant.url }}">
+      <img src="/plants/{{ plant.fileSlug }}.jpeg" alt="{{ plant.title }}" />
+    </a>
+  </li>
+{% endfor %}
+</ul>

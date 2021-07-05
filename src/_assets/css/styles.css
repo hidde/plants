@@ -1,0 +1,230 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: ivory;
+  font: 100%/1.5 'Fira Sans', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: midnightblue;
+    color: khaki;
+  }
+}
+aside {
+  margin: 2em 0 40vh;
+}
+aside p:last-child {
+  font-size: 80%;
+  margin-top: 2em;
+  font-style: italic;
+}
+a {
+  color: currentColor;
+}
+a:hover {
+  color: #555;
+}
+:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 blue;
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999em;
+  top: -9999em;
+}
+h1 {
+  font: 2.85em/.85 'Bungee Outline';
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+h1 span {
+  transform: rotate(-5deg);
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.75);
+}
+@media (prefers-color-scheme: dark) {
+  h1 span {
+     color: rgba(240,230,140, 0.75);
+  }
+}
+@media (min-width: 50em) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    position: sticky;
+    top: 2em;
+  }
+}
+h2 span {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: .25em .5em;
+  width: max-content;
+  z-index: 1;
+  position: relative;
+}
+.hiddedevriesnl {
+  border: 0;
+  border-radius: 100%;
+  width: 2em;
+  display: inline-block;
+  vertical-align: top;
+  padding: .25em;
+}
+  .hiddedevriesnl img {
+    border-radius: 100%;
+  }
+@media (min-width: 50em) {
+  .hiddedevriesnl {
+    width: 3em;
+  }
+}
+ul {
+  padding: 0;
+  display: grid;
+  gap: 1em;
+  align-items: start;
+  overflow: auto;
+  justify-content: start;
+  grid-auto-flow: column;
+  grid-auto-columns: 30vh;
+}
+@media (min-width: 50em) {
+  ul {
+    margin-left: 7em;
+    justify-content: center;
+    overflow: visible;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, 10em);
+  }
+}
+li {
+  list-style: none;
+  background-color: #444;
+  color: white;
+}
+li:nth-child(odd) {
+  margin-top: 1em;
+}
+li.fave {
+  position: relative;
+}
+li.fave summary > div::before {
+  content: "5✯";
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  font-weight: bold;
+  font-size: 100%;
+  position: absolute;
+  padding: .5em;
+  background-color: crimson;
+  top: -.75em;
+  right: -.5em;
+  transform: rotate(1deg);
+  border-radius: 100%;
+  margin-left: -1em;
+  height: 1.4em;
+}
+li a {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+li a:hover {
+  color: #eee;
+}
+li img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #555;
+  min-block-size: 16em;
+}
+li div,
+li p {
+  display: block;
+  padding: 1em;
+  text-align: center;
+  font-size: 90%;
+}
+li strong {
+  display: block;
+  font-size: 110%;
+}
+img {
+  max-width: 100%;
+}
+header {
+  text-align: center;
+}
+@media (min-width: 50em) {
+  header {
+    text-align: left;
+  }
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: .5em 1em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: .75em;
+  margin: 0 -.5em;
+  overflow: auto;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 90%;
+  padding: .25em;
+}
+nav a:hover {
+  color: #ddd;
+}
+nav a[aria-current="true"] {
+  color: black;
+  background-color: white;
+}
+nav::before {
+  /* content: attr(aria-label); */
+  /* display: block; */
+  color: white;
+  font-weight: bold;
+}
+@media (min-width: 50em) {
+  nav {
+    padding: .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker,
+summary::marker
+{
+  list-style: none;
+  display: none;
+}
+summary:hover img {
+  transition: transform 0.2s;
+  transform: scale(1.05);
+}
+summary:hover:focus img {
+  transform: none;
+}
+summary:focus {
+  outline-offset: -1px;
+  box-shadow: 0px 0 0px 3px darkslategray;
+}
